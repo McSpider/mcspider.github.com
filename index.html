@@ -6,6 +6,28 @@
 	<title>Nothing to see here, move along.</title>
 </head>
 
+<script type="text/javascript">
+
+var text1 = '<span class="inline" style="color: #5a006b;">Nothing to see here</span>, <span class="inline" style="color: #00136b;">move along</span>.<br /><br />'
+var text2 = 'Absolutely <span class="inline" style="color: #6b0001;">nothing</span>.<br /><br />'
+var text3 = '~ ~ ~<br /><br />Bored? Go Here:<br /><br /><a href="http://ellieonplanetx.com">Planet X</a>'
+
+
+function textChange(){
+  document.getElementById('label').innerHTML=text1;
+  setTimeout( textChange1, 30000 ); // 30 sec
+}
+
+function textChange1() {
+  document.getElementById('label').innerHTML=text1+text2;
+//  setTimeout( textChange2, 60000 ); //60 sec
+}
+function textChange2() {
+  document.getElementById('label').innerHTML=text1+text2+text3;
+}
+
+</script>
+
 <style>
 
 body {
@@ -27,11 +49,16 @@ body {
   display: inline-block;
 }
 
+a {
+  color: #00136b;
+  font-weight: normal;
+}
+
 </style>
 
-<body>
+<body onload="textChange()">
 
-<span class="label"><span class="inline" style="color: #5a006b;">Nothing to see here</span>, <span class="inline" style="color: #00136b;">move along</span>.</span>
+<span class="label" id="label"><span class="inline" style="color: #5a006b;">Nothing to see here</span>, <span class="inline" style="color: #00136b;">move along</span>.</span>
 
 </body>
 </html>
