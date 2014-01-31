@@ -6,12 +6,11 @@
 	<title>Nothing to see here, move along.</title>
 </head>
 
+<link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="./css/style.css"/>
 <script type="text/javascript">
-
 var text1 = '<span class="inline" style="color: #5a006b;">Nothing to see here</span>, <span class="inline" style="color: #00136b;">move along</span>.<br /><br />'
 var text2 = 'Absolutely <span class="inline" style="color: #6b0001;">nothing</span>.<br /><br />'
-var text3 = '~ ~ ~<br /><br />Bored? Go Here:<br /><br /><a href="http://ellieonplanetx.com">Planet X</a>'
-
 
 function textChange(){
   document.getElementById('label').innerHTML=text1;
@@ -20,46 +19,18 @@ function textChange(){
 
 function textChange1() {
   document.getElementById('label').innerHTML=text1+text2;
-//  setTimeout( textChange2, 60000 ); //60 sec
 }
-function textChange2() {
-  document.getElementById('label').innerHTML=text1+text2+text3;
-}
-
 </script>
 
-<style>
-
-body {
-  background-color: #efefef;
-}
-
-.label {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 150px;
-  font-family: Georgia;
-  font-size: 20px;
-  color: #333;
-  text-align: center;
-}
-
-.inline {
-  display: inline-block;
-}
-
-a {
-  color: #00136b;
-  font-weight: normal;
-}
-
-</style>
 
 <body onload="textChange()">
 
+<img class="center" src="./img/PurpleBot.png">
 <span class="label" id="label"><span class="inline" style="color: #5a006b;">Nothing to see here</span>, <span class="inline" style="color: #00136b;">move along</span>.</span>
 
 </body>
+
+<!-- Retina JS -->
+<script type="text/javascript" src="./js/retina.js"></script>
 </html>
 
